@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I.E. Virgen del Carmen 3065</title>
+
+<style>
+:root{
+  --mostaza:#c9a227;
+  --marron:#5a3e1b;
+  --blanco:#ffffff;
+  --gris:#f4f4f4;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--gris);
+}
+
+/* NAVBAR */
+header{
+  background:var(--marron);
+  color:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
+
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  height:45px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--mostaza);
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+             url("https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80")
+             center/cover no-repeat;
+  color:white;
+  text-align:left;
+  padding:160px 40px 120px;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+.btn{
+  background:var(--mostaza);
+  color:white;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#a8851d;
+}
+
+/* SECCIONES */
+section{
+  padding:80px 30px;
+  text-align:center;
+}
+
+section h2{
+  color:var(--marron);
+  margin-bottom:40px;
+  font-size:32px;
+}
+
+/* TARJETAS */
+.cards{
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  width:280px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card h3{
+  color:var(--marron);
+  margin:15px 0 10px;
+}
+
+.card p{
+  padding:0 15px 20px;
+  font-size:15px;
+}
+
+/* NOSOTROS */
+.nosotros{
+  background:white;
+}
+
+/* CONTACTO */
+.contacto{
+  background:var(--marron);
+  color:white;
+}
+
+.contacto p{
+  margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+  background:#3e2a12;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{
+    font-size:34px;
+  }
+
+  nav{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="logo.jpg" class="logo" alt="Logo Colegio">
+    <h2>Virgen del Carmen 3065</h2>
+  </div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#niveles">Niveles</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <h1>Bienvenidos a<br>I.E. Virgen del Carmen 3065</h1>
+  <p>Formando estudiantes con valores y excelencia académica.</p>
+  <a href="#nosotros" class="btn">Conócenos</a>
+</section>
+
+<!-- NIVELES -->
+<section id="niveles">
+  <h2>Niveles Educativos</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80">
+      <h3>Inicial</h3>
+      <p>Formación basada en el juego y el desarrollo emocional.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=600&q=80">
+      <h3>Primaria</h3>
+      <p>Educación integral enfocada en valores y aprendizaje.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=600&q=80">
+      <h3>Secundaria</h3>
+      <p>Preparación académica para los retos del futuro.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="nosotros" id="nosotros">
+  <h2>Nosotros</h2>
+  <p>
+    Somos una institución educativa comprometida con la formación
+    académica y en valores de nuestros estudiantes.
+  </p>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+  <h2>Contacto</h2>
+  <p><strong>I.E. Virgen del Carmen 3065</strong></p>
+  <p>Comas, Lima – Perú</p>
+  <p>Tel: 970 335 312</p>
+</section>
+
+<footer>
+  © 2026 I.E. Virgen del Carmen 3065
+</footer>
+
+</body>
+</html>
